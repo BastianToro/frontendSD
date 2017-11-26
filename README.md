@@ -24,4 +24,8 @@ Otros paquetes de utilidad son instalados asi:
 
 * npm install json-query http
 
+#Compilación:
+
+Usar comando: npm start
+
 # Autores: Mauricio Rojas - Bastián Toro
