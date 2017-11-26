@@ -1,0 +1,51 @@
+<h1>BUSCADOR IMDB</h1>
+<section class="get">
+	<p>{{ error }}</p>
+    <h3>Buscar por nombre de la pelicula</h3>
+    <form action="/get-data" method="get">
+    	<!--<p>{{ saludo }}</p>-->
+        <div class="input">
+            <label for="noanme">nombre</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <button type="submit">BUSCAR</button>
+        <article class="item">
+            <br><div>{{title}}</div>
+            <div>{{year}}</div>
+            <div>{{id}}</div></br>
+        </article>
+    </form>
+    <h3>Obtener el/los genero/s de una pelicula</h3>
+    <form action="/get-data" method="get">
+        <div class="input">
+            <label for="titulo">titulo pelicula</label>
+            <input type="text" id="ano" name="ano">
+        </div>
+        <button type="submit">BUSCAR</button>
+        <div>{{title2}}</div>
+        <div>
+        {{# each items2 }}
+            <article class="item">
+            	<br><div>Genero: {{this.genre}}</div></br>
+            </article>
+        {{/each}}
+   		</div>
+    </form>
+    <h3>Buscar por genero</h3>
+    <form action="/get-data" method="get">
+        <div class="input">
+            <label for="genero">genero</label>
+            <input type="text" id="genero" name="genero">
+        </div>
+        <button type="submit">BUSCAR</button>
+        <div>
+        {{# each items3 }}
+            <article class="item">
+            	<br><div>Titulo: {{this.title}}</div>
+            	<div>Año: {{this.year}}</div>
+            	<div>genero: {{this.genre}}</div></br>
+            </article>
+        {{/each}}
+   		</div>
+    </form>
+</section>
